@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import mainLogic from '../src/index.js';
 import brainCalc from '../games/calc-game.js';
 

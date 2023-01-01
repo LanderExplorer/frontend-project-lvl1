@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
 export const getRandomNumber = () => Math.floor(Math.random() * 20);
