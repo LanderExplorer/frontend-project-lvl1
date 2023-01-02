@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import mainLogic from '../src/index.js';
-import  from '../games/;
+import brainGcd from '../games/brain-gcd.js'
 
 const description = 'Find the greatest common divisor of given numbers.';
-mainLogic(, description);
+mainLogic(brainGcd, description);
