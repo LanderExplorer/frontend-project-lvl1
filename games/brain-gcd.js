@@ -8,13 +8,13 @@ const getGcd = (num1, num2) => {
   return Math.abs(num1);
 };
 
-export const getAnswer = (question) => {
+const getAnswer = (question) => {
   console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
   return answer;
 };
 
-export const getRandomNumber = () => Math.floor(Math.random() * 50);
+const getRandomNumber = () => Math.floor(Math.random() * 50);
 
 const brainGcd = () => {
   const number1 = getRandomNumber();

@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-export const getRandomNumber = () => Math.floor(Math.random() * 20);
-export const getRandomOperator = () => {
+const getRandomNumber = () => Math.floor(Math.random() * 20);
+const getRandomOperator = () => {
   const index = Math.floor(Math.random() * 3);
   const operators = ['+', '-', '*'];
   return operators[index];
 };
 
-export const getAnswer = (question) => {
+const getAnswer = (question) => {
   console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
   return answer;
