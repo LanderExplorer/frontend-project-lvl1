@@ -38,22 +38,3 @@ const brainCalc = () => {
   return [userAnswer, correctAnswer];
 };
 export default brainCalc;
-
-//   for (let i = 0; i < 3; i += 1) {
-
-//     let correctAnswer = 0;
-
-//     // console.log('What is the result of the expression?');
-//     console.log(`Question: ${number1} ${randomOperator} ${number2}`);
-//     const userAnswer = Number(readlineSync.question('Your answer: '));
-//     if (userAnswer !== correctAnswer) {
-//       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-//       return console.log(`Let's try again, ${userName}`);
-//     }
-//     console.log('Correct!');
-//   }
-
-//   return console.log(`Congratulations, ${userName}!`);
-// };
-
-// brainCalc();
