@@ -9,7 +9,7 @@ const getAnswer = (question) => {
 
 const getRandomNumber = () => Math.floor(Math.random() * 100);
 const isEven = (number) => (number % 2 === 0);
-const check = (number) => {
+const checkEven = (number) => {
   const result = isEven(number) ? 'yes' : 'no';
   return result;
 };
@@ -17,7 +17,7 @@ const check = (number) => {
 const brainEven = () => {
   const question = getRandomNumber();
   const userAnswer = getAnswer(question);
-  const correctAnswer = check(question);
+  const correctAnswer = checkEven(question);
 
   return [userAnswer, correctAnswer];
 };
