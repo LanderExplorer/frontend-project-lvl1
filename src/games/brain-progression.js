@@ -1,5 +1,5 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import mainLogic from '../index.js';
 
 const getAnswer = (question) => {
   console.log(`Question: ${question}`);
@@ -42,4 +42,6 @@ const brainProgression = () => {
 
   return [userAnswer, correctAnswer];
 };
-export default brainProgression;
+
+const description = 'What number is missing in the progression?';
+export default () => mainLogic(brainProgression, description);

@@ -1,5 +1,5 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import mainLogic from '../index.js';
 
 const getRandomNumber = () => Math.floor(Math.random() * 20);
 const getRandomOperator = () => {
@@ -37,4 +37,6 @@ const brainCalc = () => {
   }
   return [userAnswer, correctAnswer];
 };
-export default brainCalc;
+
+const description = 'What is the result of the expression?';
+export default () => mainLogic(brainCalc, description);

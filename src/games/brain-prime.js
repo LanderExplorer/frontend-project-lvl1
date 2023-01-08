@@ -1,5 +1,5 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import mainLogic from '../index.js';
 
 const getAnswer = (question) => {
   console.log(`Question: ${question}`);
@@ -19,7 +19,7 @@ const isPrime = (number) => {
   return true;
 };
 
-const checkPrime = (number) => {
+const checkIsPrime = (number) => {
   const result = isPrime(number) ? 'yes' : 'no';
   return result;
 };
@@ -33,9 +33,10 @@ const getRandomNumber = (start = 1, end = 20) => {
 const brainPrime = () => {
   const question = getRandomNumber(1, 20);
   const userAnswer = getAnswer(question);
-  const correctAnswer = checkPrime(question);
+  const correctAnswer = checkIsPrime(question);
 
   return [userAnswer, correctAnswer];
 };
 
-export default brainPrime;
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+export default () => mainLogic(brainPrime, description);

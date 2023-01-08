@@ -1,5 +1,5 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import mainLogic from '../index.js';
 
 const getGcd = (num1, num2) => {
   if (num2) {
@@ -26,4 +26,5 @@ const brainGcd = () => {
   return [userAnswer, correctAnswer];
 };
 
-export default brainGcd;
+const description = 'Find the greatest common divisor of given numbers.';
+export default () => mainLogic(brainGcd, description);
