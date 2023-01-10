@@ -1,11 +1,5 @@
-import readlineSync from 'readline-sync';
-import mainLogic from '../index.js';
-
-const getAnswer = (question) => {
-  console.log(`Question: ${question}`);
-  const answer = readlineSync.question('Your answer: ');
-  return answer;
-};
+import { getAnswer, getRandomNumber } from '../supplementary.js';
+import runMainLogic from '../index.js';
 
 const isPrime = (number) => {
   if (number <= 1) {
@@ -24,19 +18,13 @@ const checkIsPrime = (number) => {
   return result;
 };
 
-const getRandomNumber = (start = 1, end = 20) => {
-  const min = Math.ceil(start);
-  const max = Math.floor(end);
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
-
 const brainPrime = () => {
-  const question = getRandomNumber(1, 20);
-  const userAnswer = getAnswer(question);
-  const correctAnswer = checkIsPrime(question);
+  const primeQuestion = getRandomNumber(1, 20);
+  const userAnswer = getAnswer(primeQuestion);
+  const correctAnswer = checkIsPrime(primeQuestion);
 
   return [userAnswer, correctAnswer];
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-export default () => mainLogic(brainPrime, description);
+export default () => runMainLogic(brainPrime, description);

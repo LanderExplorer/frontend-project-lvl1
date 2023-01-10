@@ -1,17 +1,5 @@
-import readlineSync from 'readline-sync';
-import mainLogic from '../index.js';
-
-const getAnswer = (question) => {
-  console.log(`Question: ${question}`);
-  const answer = readlineSync.question('Your answer: ');
-  return answer;
-};
-
-const getRandomNumber = (start = 1, end = 20) => {
-  const min = Math.ceil(start);
-  const max = Math.floor(end);
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
+import { getAnswer, getRandomNumber } from '../supplementary.js';
+import runMainLogic from '../index.js';
 
 const brainProgression = () => {
   const begin = getRandomNumber(1, 20);
@@ -44,4 +32,4 @@ const brainProgression = () => {
 };
 
 const description = 'What number is missing in the progression?';
-export default () => mainLogic(brainProgression, description);
+export default () => runMainLogic(brainProgression, description);

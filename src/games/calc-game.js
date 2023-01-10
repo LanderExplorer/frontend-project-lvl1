@@ -1,22 +1,15 @@
-import readlineSync from 'readline-sync';
-import mainLogic from '../index.js';
+import { getAnswer, getRandomNumber } from '../supplementary.js';
+import runMainLogic from '../index.js';
 
-const getRandomNumber = () => Math.floor(Math.random() * 20);
 const getRandomOperator = () => {
   const index = Math.floor(Math.random() * 3);
   const operators = ['+', '-', '*'];
   return operators[index];
 };
 
-const getAnswer = (question) => {
-  console.log(`Question: ${question}`);
-  const answer = readlineSync.question('Your answer: ');
-  return answer;
-};
-
 const brainCalc = () => {
-  const number1 = getRandomNumber();
-  const number2 = getRandomNumber();
+  const number1 = getRandomNumber(1, 30);
+  const number2 = getRandomNumber(1, 30);
   const randomOperator = getRandomOperator();
   const question = `${number1} ${randomOperator} ${number2}`;
   const userAnswer = Number(getAnswer(question));
@@ -39,4 +32,4 @@ const brainCalc = () => {
 };
 
 const description = 'What is the result of the expression?';
-export default () => mainLogic(brainCalc, description);
+export default () => runMainLogic(brainCalc, description);
