@@ -1,35 +1,29 @@
 import getRandomNumber from '../helper.js';
 import runMainLogic from '../index.js';
 
-const getRandomOperator = () => {
-  const index = Math.floor(Math.random() * 3);
-  const operators = ['+', '-', '*'];
-  return operators[index];
+const operators = ['+', '-', '*'];
+
+const calculate = (operand1, operand2, operator) => {
+  switch (operator) {
+    case '+':
+      return operand1 + operand2;
+    case '-':
+      return operand1 - operand2;
+    case '*':
+      return operand1 * operand2;
+    default:
+      throw new Error(`operation ${operator} is not supported`);
+  }
 };
 
-const getBrainCalcGameData = () => {
-  const number1 = getRandomNumber(1, 30);
-  const number2 = getRandomNumber(1, 30);
-  const randomOperator = getRandomOperator();
-  const question = `${number1} ${randomOperator} ${number2}`;
-  const userAnswer = Number(getAnswer(question));
-  let correctAnswer = 0;
-
-  switch (randomOperator) {
-    case '+':
-      correctAnswer = number1 + number2;
-      break;
-    case '-':
-      correctAnswer = number1 - number2;
-      break;
-    case '*':
-      correctAnswer = number1 * number2;
-      break;
-    default:
-      correctAnswer = 0;
-  }
-  return [userAnswer, correctAnswer];
+const getBrainCalcData = () => {
+  const randomOperand1 = getRandomNumber(1, 20);
+  const randomOperand2 = getRandomNumber(1, 20);
+  const randomOperator = operators[getRandomNumber(0, 2)];
+  const calcQuestion = `${randomOperand1} ${randomOperator} ${randomOperand2}`;
+  const correctAnswer = String(calculate(randomOperand1, randomOperand2, randomOperator));
+  return [calcQuestion, correctAnswer];
 };
 
 const description = 'What is the result of the expression?';
-export default () => runMainLogic(getBrainCalcGameData, description);
+export default () => runMainLogic(getBrainCalcData, description);

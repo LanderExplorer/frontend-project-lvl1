@@ -1,4 +1,4 @@
-import { getAnswer, getRandomNumber } from '../helper.js';
+import getRandomNumber from '../helper.js';
 import runMainLogic from '../index.js';
 
 const isPrime = (number) => {
@@ -13,18 +13,12 @@ const isPrime = (number) => {
   return true;
 };
 
-const checkIsPrime = (number) => {
-  const result = isPrime(number) ? 'yes' : 'no';
-  return result;
-};
-
-const brainPrime = () => {
+const getBrainPrimeData = () => {
   const primeQuestion = getRandomNumber(1, 20);
-  const userAnswer = getAnswer(primeQuestion);
-  const correctAnswer = checkIsPrime(primeQuestion);
+  const correctAnswer = isPrime(primeQuestion) ? 'yes' : 'no';
 
-  return [userAnswer, correctAnswer];
+  return [primeQuestion, correctAnswer];
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-export default () => runMainLogic(brainPrime, description);
+export default () => runMainLogic(getBrainPrimeData, description);
