@@ -1,4 +1,4 @@
-import { getAnswer, getRandomNumber } from '../supplementary.js';
+import getRandomNumber from '../helper.js';
 import runMainLogic from '../index.js';
 
 const getRandomOperator = () => {
@@ -7,7 +7,7 @@ const getRandomOperator = () => {
   return operators[index];
 };
 
-const brainCalc = () => {
+const getBrainCalcGameData = () => {
   const number1 = getRandomNumber(1, 30);
   const number2 = getRandomNumber(1, 30);
   const randomOperator = getRandomOperator();
@@ -32,4 +32,4 @@ const brainCalc = () => {
 };
 
 const description = 'What is the result of the expression?';
-export default () => runMainLogic(brainCalc, description);
+export default () => runMainLogic(getBrainCalcGameData, description);

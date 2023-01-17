@@ -1,4 +1,4 @@
-import { getAnswer, getRandomNumber } from '../supplementary.js';
+import { getAnswer, getRandomNumber } from '../helper.js';
 import runMainLogic from '../index.js';
 
 const isPrime = (number) => {
