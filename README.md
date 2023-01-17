@@ -10,35 +10,40 @@ Clone this repository
 ```
 $ git clone
 ```
-Run npm link in your terminal
+Type npm link in your terminal
 ```
 $ npm link
 ```
-Run make instal in your terminal
+Type make install in your terminal
 ```
-$ make instal
+$ make install
 ```
 ### Presentation of Brain-even
+Type the following command to run the game
 ```
 $ brain-even
 ```
 [![asciicast](https://asciinema.org/a/w8jcTe902jOEN1ugOhlq9o9OJ.svg)](https://asciinema.org/a/w8jcTe902jOEN1ugOhlq9o9OJ)
 ### Presentation of Brain-calc
+Type the following command to run the game
 ```
 $ brain-calc
 ```
 [![asciicast](https://asciinema.org/a/ZLz4CTUEv9P2Px12qkfBdePbN.svg)](https://asciinema.org/a/ZLz4CTUEv9P2Px12qkfBdePbN)
 ### Presentation of Brain-gcd
+Type the following command to run the game
 ```
 $ brain-gcd
 ```
 [![asciicast](https://asciinema.org/a/QWw4VahXQO1jnCBMipcXu4Sm0.svg)](https://asciinema.org/a/QWw4VahXQO1jnCBMipcXu4Sm0)
 ### Presentation of Brain-progression
+Type the following command to run the game
 ```
 $ brain-progression
 ```
 [![asciicast](https://asciinema.org/a/BUWrLERUCuspJ4dZKV11AQA8Q.svg)](https://asciinema.org/a/BUWrLERUCuspJ4dZKV11AQA8Q)
 ### Presentation of Brain-prime
+Type the following command to run the game
 ```
 $ brain-prime
 ```
