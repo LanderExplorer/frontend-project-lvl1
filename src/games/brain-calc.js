@@ -2,6 +2,8 @@ import getRandomNumber from '../helper.js';
 import runMainLogic from '../index.js';
 
 const operators = ['+', '-', '*'];
+const minNum = 1;
+const maxNum = 20;
 
 const calculate = (operand1, operand2, operator) => {
   switch (operator) {
@@ -17,9 +19,9 @@ const calculate = (operand1, operand2, operator) => {
 };
 
 const getBrainCalcData = () => {
-  const randomOperand1 = getRandomNumber(1, 20);
-  const randomOperand2 = getRandomNumber(1, 20);
-  const randomOperator = operators[getRandomNumber(0, 2)];
+  const randomOperand1 = getRandomNumber(minNum, maxNum);
+  const randomOperand2 = getRandomNumber(minNum, maxNum);
+  const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
   const calcQuestion = `${randomOperand1} ${randomOperator} ${randomOperand2}`;
   const correctAnswer = String(calculate(randomOperand1, randomOperand2, randomOperator));
   return [calcQuestion, correctAnswer];

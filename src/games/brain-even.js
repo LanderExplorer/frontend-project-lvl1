@@ -2,9 +2,11 @@ import getRandomNumber from '../helper.js';
 import runMainLogic from '../index.js';
 
 const isEven = (number) => (number % 2 === 0);
+const minNum = 1;
+const maxNum = 50;
 
 const getBrainEvenData = () => {
-  const evenQuestion = getRandomNumber(1, 50);
+  const evenQuestion = getRandomNumber(minNum, maxNum);
   const correctAnswer = isEven(evenQuestion) ? 'yes' : 'no';
 
   return [evenQuestion, correctAnswer];

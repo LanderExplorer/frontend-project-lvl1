@@ -13,8 +13,11 @@ const isPrime = (number) => {
   return true;
 };
 
+const minNum = 1;
+const maxNum = 20;
+
 const getBrainPrimeData = () => {
-  const primeQuestion = getRandomNumber(1, 20);
+  const primeQuestion = getRandomNumber(minNum, maxNum);
   const correctAnswer = isPrime(primeQuestion) ? 'yes' : 'no';
 
   return [primeQuestion, correctAnswer];
